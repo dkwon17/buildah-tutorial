@@ -1,0 +1,5 @@
+FROM fedora:40
+RUN ls -l /test-script.sh
+RUN /test-script.sh "Hello world"
+RUN dnf update -y | tee /output/update-output.txt
+RUN dnf install -y gcc
